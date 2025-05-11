@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background  실습</title>
+
+  <style>
+
+    .container {
+      position: relative;
+      margin: 300px auto;
+      width: 450px;
+      height: 450px;
+      background-color: crimson;
+      border-radius: 50%;
+    }
+
+    .bgCircle {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .circle {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background-color: crimson;
+      overflow: hidden;
+    }
+
+    #background {
+        width: 500px;
+        height: 500px;
+
+    }
+
+    #owl {
+      position: absolute;
+      top: 250px;
+      left: 100px;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="bgCircle">
+
+    </div>
+     <div class="circle">
+       <img src="../img/back.avif" alt="배경" id="background">
+       <img src="../img/owl.png" alt="캐릭터" id="owl">
+     </div> 
+
+  </div>
+</body>
+</html>

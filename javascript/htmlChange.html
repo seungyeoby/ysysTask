@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바 스크립트로 html 변환</title>
+</head>
+<body>
+   <div>민트 초코는 <span id="good">맛있다^_^</span></div>
+
+
+   <script>
+    let data = document.getElementById('good');
+    console.log(data)
+    data.style.color = "red"
+    data.innerHTML = "맛없다.. ㅜ-ㅜ"
+   </script>
+</body>
+</html>

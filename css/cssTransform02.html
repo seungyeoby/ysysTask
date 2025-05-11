@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cssTransform실습 예제 2</title>
+
+  <style>
+    div {
+      margin: 0;
+      background-color: aqua;
+      border: 1px solid black;
+      width: 150px;
+      height: 150px;
+      /* transform: translateX(100px); */
+      transition: all 0.8s;
+    }
+    
+    
+    .wide:hover {
+      width: 400px;
+      transition: all 0.8s;
+    }
+
+    
+    .skew:hover {
+      transform: translateX(43px) skewX(-30deg);
+      transition: all 0.8s;
+    }
+
+    .circle:hover {
+      transform:  translateX(300px) rotate(180deg);
+      transition: all 0.8;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .scale:hover {
+      transform: translate(80px, 80px)  rotateY(360deg) scale(2);
+        background: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wide"></div>
+  <div class="skew"></div>
+  <div class="circle"></div>
+  <div class="scale"></div>
+</body>
+</html>

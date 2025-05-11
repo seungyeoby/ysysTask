@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position으로 애벌래 만들기</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      position: relative;
+    }
+
+    div.head {
+      top: 80px;
+      left: 80px;
+    }
+    div.white {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    div.black {
+      position: relative;
+      width: 50%;
+      height: 50%;
+      top: 10px;
+    }
+
+    div.body1 {
+      top: 60px;
+      left: 30px;
+    }
+    div.body2 {
+      top:-20px;
+      left: 70px;
+    }
+    div.body3 {
+      top: -100px;
+      left: 110px;
+    }
+    div.body4 {
+      top: -200px;
+      left: 160px;
+    }
+    div.body5 {
+      top: -300px;
+      left: 200px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="head" style="background-color: darkblue;">
+    <div class="white" style="background-color: white;">
+      <div class="black" style="background-color: black;">
+      </div>
+    </div>
+    <div class="body1" style="background-color: blue;"></div>
+    <div class="body2" style="background-color: slateblue;"></div>
+    <div class="body3" style="background-color: skyblue;"></div>
+    <div class="body4" style="background-color: aqua;"></div>
+    <div class="body5" style="background-color: blue;"></div>
+
+  </div>
+</body>
+</html>
