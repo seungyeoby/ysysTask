@@ -10,6 +10,8 @@
 />
 <link rel="stylesheet" href="/project/basic.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 
 <style>
   p {
@@ -82,8 +84,10 @@
             <span class="purpleColor">보라색(#C88DDD)</span>
           </div>
         </div>
+        <div class="chartContainer">
+          <canvas id="myChart"  width="400" height="400"></canvas>
+        </div>
       </div>
-
     </div>
     <div class="skillsInfo">
 
@@ -93,11 +97,45 @@
 
 
 
+  <script>
+    window.addEventListener("load", (event) => {
+    new cursoreffects.ghostCursor();
+  });
+  </script>
+
 
   <script>
     fetch('navigation.html').then(res => res.text()).then(html=> {
       document.getElementById('nav-container').innerHTML = html
     })
+  </script>
+  <script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      type: 'polarArea',
+      data: {
+        labels: ['html', 'css', 'Javascript'],
+        datasets: [{
+          label: 'skills',
+          data: [80, 75 , 65],
+          borderWidth: 1,
+          // backgroundColor : ['orange', 'blue', 'yellow']
+        }]
+      },
+      options: {
+       responsive: true,
+        plugins: {
+          legend: {
+            position: 'right'
+          },
+        title: {
+          display: true,
+          text: 'My Front-End Skill Chart'
+        }
+      }
+      }
+    });
   </script>
 </body>
 </html>

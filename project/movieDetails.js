@@ -14,6 +14,7 @@ function movieDetails() {
     return
   }
 
+
  const imgBaseUrl = "https://image.tmdb.org/t/p/w440_and_h660_face";
   const path = movie.backdrop_path || movie.poster_path || "default.jpg";
   document.getElementById('moviePoster').src = `${imgBaseUrl + path}`
@@ -21,6 +22,8 @@ function movieDetails() {
   document.getElementById("movieTitle").textContent = `${movie.original_title}`
   // document.getElementById("movieGenre").textContent = `장르: ${movie.genre_ids}`
   document.getElementById("movieOverview").textContent = `${movie.overview}`
+
+
 
 const movieGenre = document.getElementById("movieGenre");
 

@@ -1,3 +1,7 @@
+
+document.getElementById("searchMovie").addEventListener("input", movieSearch);
+
+
 function movieSearch(event) {
   if (event) event.preventDefault();
   console.log("search 시작")
