@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/project/basic.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+  p {
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+
+  }
+ .back {
+  background-color: black;
+ }
+ .container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  border: 1px solid black;
+  padding: 20px;
+ }
+ img{
+  width: 600px;
+  height: 800px;
+  background-color: bisque;
+ }
+
+ .info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-size: 20px;
+ }
+ .purpleColor {
+  color: #C88DDD;
+ }
+</style>
+</head>
+<body>
+  
+  <div id="nav-container"></div>
+  <div class="back">
+    <p>Y's Infomation</p>
+    <div class="container">
+      <img src="/project/img/img_y.webp" alt="염승엽">
+      <div class="info">
+        <div class="basicInfo">
+          <div class="infoName">
+            <span>이름 : </span>
+            <span>염승엽(Yeom SeungYeob)</span>
+          </div>
+          <div class="infoAge">
+            <span>나이 : </span>
+            <span> 33 (1993년생)</span>
+          </div>
+          <div class="infoMail">
+            <span>메일 주소 : </span>
+            <span>ysy9536@naver.com</span>
+          </div>
+          <div class="infoAddress">
+            <span>거주지 : </span>
+            <span>서울시 광진구 거주</span>
+          </div>
+        </div>
+        <div  class="etcInfo">
+          <div class="infoMbti">
+            <span>Mbti : </span>
+            <span>INFJ</span>
+          </div>
+          <div class="likeColor">
+            <span>좋아 하는 색 : </span>
+            <span class="purpleColor">보라색(#C88DDD)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="skillsInfo">
+
+    </div>
+
+  </div>
+
+
+
+
+  <script>
+    fetch('navigation.html').then(res => res.text()).then(html=> {
+      document.getElementById('nav-container').innerHTML = html
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/project/basic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/project/movieList.js"></script>
+<script src="/project/main.js" defer></script>
+<script src="/project/movieDetails.js"></script>
+<script src="/project/ranMovie.js"></script>
+<script>
+
+</script>
+
+<style>
+  img {
+    margin: 0 auto;
+    width: 200px;
+    border-radius: 10px;
+  }
+  img:hover {
+    opacity: 0.7;
+  }
+  .text {
+    width:200px;
+    margin-bottom: 10px;
+  }
+  #movieList div {
+    width: 200px;
+    height: 400px;
+    /* background-color: #555; */
+  }
+  #movieList  a {
+    text-decoration: none;
+    color: bisque;
+  }
+  .backGround {
+    width: 100vw;
+    height: 100%;
+    background-color: black;
+  }
+
+
+
+  .swiper-slide img {
+     display: block;
+     width: 1500px;
+     height: 400px;
+     object-fit: cover; /* ✅ 핵심! 비율 유지하며 잘 채움 */
+     object-position: bottom; /* 필요시 중앙 정렬 */
+     margin: 0 auto;
+  }
+
+</style>
+</head>
+<body>
+  <div id="nav-container" ></div>
+  <div class="backGround pt-5">
+  <div class="swiper">
+    <div class="swiper-wrapper mb-4">
+      <!-- <div class="swiper-slide">Slide1</div>
+      <div class="swiper-slide">Slide2</div>
+      <div class="swiper-slide">Slide3</div>
+      <div class="swiper-slide">Slide4</div>
+      <div class="swiper-slide">Slide5</div> -->
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+    <div id="movieList" class="d-flex flex-wrap justify-content-center align-items-center gap-3 col-md-8 m-auto" ></div>
+    <div id="scrollTrigger">로딩 중...</div>
+  </div>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      Loop : true, 
+      autoplay : {
+        delay : 5000
+      },
+      // width : 1000,
+      height : 800,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })
+  </script>
+
+  <script>
+    fetch('navigation.html').then(res => res.text()).then(html=> {
+      document.getElementById('nav-container').innerHTML = html
+    })
+  </script>
+</body>
+</html>
