@@ -43,7 +43,7 @@ function movieRender(count) {
   }
 }
 
-// ✅ IntersectionObserver 정의
+// ✅ IntersectionObserver 정의 옵저빙
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {

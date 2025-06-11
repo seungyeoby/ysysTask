@@ -1,0 +1,22 @@
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "nickname" : "Doe",
+  "email" : "john.doe1@example",
+  "password" : "1234"
+}
+###
+
+GET http://localhost:3000/users/1
+###
+
+ 
+POST http://localhost:3000/users/1/update
+Content-Type: application/json
+
+{
+  "nickname" : "Alice",
+  "email" : "My.Alice@example",
+  "password" : "6666"
+}

@@ -54,6 +54,8 @@ movieGenre.textContent = "장르 : " + matchedGenre.join(",");
       <br>
     ${average} /10
   `
+
+  // 별점 그리기
 function renderStar(score) {
   const starEl = document.getElementById("starRating");
   const starScore = Math.floor(score);

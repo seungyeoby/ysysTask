@@ -1,0 +1,46 @@
+
+generator client {
+  provider = "prisma-client-js"
+
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+
+
+
+
+}
+
+
+model Users {
+   userId   Int      @id @default(autoincrement()) @map("userId") //@map("db에 들어갈 이름")
+   email    String   @unique @map("email")
+   password String   @map("password")
+   nickname String   @map("nickname")
+   createAt DateTime @default(now()) @map("crateAt")
+   updateAt DateTime @updatedAt @map("updateAt")
+
+   Posts Post[]
+
+   @@map("Users")
+}
+
+model Post {
+  postId  Int       @id @default(autoincrement()) @map("postId")
+  userId  Int       @map("userId") // FK 왜래 키  
+  title   String    @map("title")
+  content String    @map("content") @db.Text
+  createAt DateTime @default(now()) @map("crateAt")
+  updateAt DateTime @updatedAt @map("updateAt")
+
+  User Users @relation(fields: [userId], references: [userId])
+
+  @@map("Post")
+
+}
+
+
+
+
